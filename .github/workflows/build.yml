@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    runs-on: docker
+    runs-on: ubuntu-latest
     permissions:
       contents: read # read the repository
       packages: write # to push to GHCR, omit for other container registry. https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#publishing-a-package-using-an-action
