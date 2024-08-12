@@ -26,7 +26,7 @@ jobs:
       - uses: int128/kaniko-action@v1
         with:
           build-args: |
-            VERSION=$GITHUB_REF_NAME
+            VERSION=${{ env.GITHUB_REF_NAME }}
           push: true
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
