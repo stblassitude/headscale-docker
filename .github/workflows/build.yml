@@ -25,8 +25,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: int128/kaniko-action@v1
         with:
-          build-args:
-            - VERSION=$GITHUB_REF_NAME
+          build-args: |
+            VERSION=$GITHUB_REF_NAME
           push: true
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
